@@ -9,10 +9,10 @@ const sizes = document.querySelector(".sizes");
 dark.addEventListener("input", handleDarkColor);
 light.addEventListener("input", handleLightColor);
 qrText.addEventListener("input", handleQRText);
-sizes.addEventListener("input", handleSize);
-shareBtn.addEventListener("input", handleShare);
+sizes.addEventListener("change", handleSize);
+shareBtn.addEventListener("click", handleShare);
 
-const defaultUrl = "";
+const defaultUrl = "Hi, I'm Saul Goodman. Did you know that you have rights? Constitution says you do. What do I.";
 let colorLight = "#fff",
     colorDark = "#000",
     text = defaultUrl,
@@ -72,7 +72,7 @@ async function handleShare()
         }
         catch (error)
         {
-            alert("ERROR: browser does not support sharing")
+            alert("ERROR: browser does not support sharing");
         }
     }, 100);
 }
